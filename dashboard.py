@@ -118,9 +118,11 @@ st.markdown("""
         font-size: 0.95em;
         font-family: 'Inter', sans-serif;
         border-radius: 8px 8px 0 0;
-        overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         animation: fadeInUp 1s ease-out forwards;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
     .cyber-table thead tr {
         background-color: rgba(0, 242, 254, 0.15);
@@ -129,7 +131,7 @@ st.markdown("""
         font-weight: bold;
     }
     .cyber-table th, .cyber-table td {
-        padding: 15px 20px;
+        padding: 12px 15px; /* Slightly reduced padding to help fit */
     }
     .cyber-table tbody tr {
         border-bottom: 1px solid rgba(255,255,255,0.05);
