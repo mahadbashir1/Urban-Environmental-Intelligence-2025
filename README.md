@@ -22,14 +22,6 @@ The dashboard is structured into four distinct analytical engines:
 4. **[✅] Visual Integrity Audit:** 
    Strict adherence to Tufte's data visualization principles (optimizing Data-Ink ratios). Actively rejects distortive 3D plotting and standardizes on accessible Sequential color mapping.
 
-## 💎 UI/UX Design
-
-The application features a fully custom **Cyberpunk Glassmorphism** architecture achieved via deep CSS DOM injection, bypassing the default Streamlit "look and feel":
-- **No Sidebar Layering:** Filters are housed in a floating, frosted-glass top navigation bar.
-- **Micro-Animations:** Fluid `fadeInUp` chart loading sequences and a pulsing neon hero header.
-- **Native Data Grids:** Pandas DataFrames are natively rendered as sleek HTML `.cyber-table` elements with hover pseudo-classes.
-- **Transparent Plotting:** All Plotly charts utilize heavily modified `plotly_dark` templates with `rgba(0,0,0,0)` backgrounds to float seamlessly on the dashboard canvas.
-
 ## ⚙️ Installation & Setup
 
 1. **Clone the repository:**
