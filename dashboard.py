@@ -111,18 +111,20 @@ st.markdown("""
     }
     
     /* Cyberpunk Styled Data Grids (HTML Tables) */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        margin: 15px 0;
+        border-radius: 8px 8px 0 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    
     .cyber-table {
         width: 100%;
         border-collapse: collapse;
-        margin: 15px 0;
-        font-size: 0.95em;
+        font-size: 0.9em; /* Slightly smaller for tighter fit */
         font-family: 'Inter', sans-serif;
-        border-radius: 8px 8px 0 0;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         animation: fadeInUp 1s ease-out forwards;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
     }
     .cyber-table thead tr {
         background-color: rgba(0, 242, 254, 0.15);
@@ -131,7 +133,7 @@ st.markdown("""
         font-weight: bold;
     }
     .cyber-table th, .cyber-table td {
-        padding: 12px 15px; /* Slightly reduced padding to help fit */
+        padding: 10px 12px; /* Tighter padding */
     }
     .cyber-table tbody tr {
         border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -446,7 +448,7 @@ with tabs[1]:
                 f"{len(ts_data)}"
             ]
         })
-        st.markdown(ts_summary.to_html(index=False, classes="cyber-table"), unsafe_allow_html=True)
+        st.markdown(f'<div class="table-container">{ts_summary.to_html(index=False, classes="cyber-table")}</div>', unsafe_allow_html=True)
         
         # Daily heatmap: show patterns day-by-day
         heat_data = df.copy()
@@ -572,7 +574,7 @@ with tabs[2]:
                 f"{poll_vals.max():.2f}"
             ]
         })
-        st.markdown(summary.to_html(index=False, classes="cyber-table"), unsafe_allow_html=True)
+        st.markdown(f'<div class="table-container">{summary.to_html(index=False, classes="cyber-table")}</div>', unsafe_allow_html=True)
 
         st.markdown("---")
         
@@ -626,7 +628,7 @@ with tabs[3]:
     
     with col2:
         st.markdown("**Zone Statistics**")
-        st.markdown(zone_stats.to_html(index=False, classes="cyber-table"), unsafe_allow_html=True)
+        st.markdown(f'<div class="table-container">{zone_stats.to_html(index=False, classes="cyber-table")}</div>', unsafe_allow_html=True)
     
     st.markdown("---")
     st.markdown("### 📝 Analytical Justification")
