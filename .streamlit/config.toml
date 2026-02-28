@@ -1,0 +1,15 @@
+[theme]
+# Primary accent color (Cyberpunk Cyan)
+primaryColor="#00F2FE"
+
+# Background color for the main content area (Dark Slate/Black)
+backgroundColor="#0A0F1C"
+
+# Background color for the sidebar and most interactive widgets
+secondaryBackgroundColor="#131B2F"
+
+# Text color (Crisp white)
+textColor="#E2E8F0"
+
+# Font (Modern sans-serif)
+font="sans serif"
